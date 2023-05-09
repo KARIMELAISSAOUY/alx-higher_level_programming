@@ -1,19 +1,20 @@
 #include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
+#include <string.h>
 #include "../lists.h"
 
 /**
- * main - check the code for Holberton School students.
- *
+ * main -- Check The Code For Holberton School ...
+ * author : abdelkarim 
  * Return: Always 0.
  */
+
 int main(void)
 {
 	listint_t *head;
 	listint_t *current;
 	listint_t *temp;
-	int i;
+	int i ;
 
 	head = NULL;
 	add_nodeint(&head, 0);
@@ -48,6 +49,5 @@ int main(void)
 	current->next = temp;
 
 	free_listint(head);
-
 	return (0);
 }
