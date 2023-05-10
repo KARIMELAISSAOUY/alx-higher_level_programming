@@ -2,16 +2,14 @@
 #include <string.h>
 #include <stdio.h>
 #include "../lists.h"
-
 /**
- * main - check the code for Holberton School students.
- *
+ * Main - Check the code for Holberton School students.
+ * alx 
  * Return: Always 0.
  */
 int main(void)
 {
 	listint_t *head;
-
 	head = NULL;
 	add_nodeint_end(&head, 0);
 	add_nodeint_end(&head, 1);
@@ -22,9 +20,7 @@ int main(void)
 	add_nodeint_end(&head, 402);
 	add_nodeint_end(&head, 1024);
 	print_listint(head);
-
-	printf("-----------------\n");
-
+	printf("-------------------\n");
 	insert_node(&head, 27);
 
 	print_listint(head);
@@ -32,4 +28,5 @@ int main(void)
 	free_listint(head);
 
 	return (0);
+
 }
