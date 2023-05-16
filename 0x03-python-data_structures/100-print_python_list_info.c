@@ -2,9 +2,7 @@
  * File: 100-print_python_list_info.c
  * Author: abdelkarim
  */
-
 #include <Python.h>
-
 /**
  * print_python_list_info -- Prints basic info about Python lists....
  * @p: A PyObject list.....

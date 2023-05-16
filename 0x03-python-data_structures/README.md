@@ -2,5 +2,6 @@
 ---
 ### ALX 
 ---
-- PYTHON 
-- # Python - Data Structures: Lists, Tuples
+-PYTHON 
+---
+# Python - Data Structures: Lists, Tuples
