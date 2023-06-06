@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defines a class Rectangle"""
+"""Defines a Class Rectangle."""
 
 
 class Rectangle:
@@ -7,8 +7,8 @@ class Rectangle:
     Class that defines properties of rectangle by: (based on 0-rectangle.py).
 
     Attributes:
-        width (int): width of the rectangle.
-        height (int): height of the rectangle.
+        Width (int): width of the rectangle.
+        Height (int): height of the rectangle.
     """
     def __init__(self, width=0, height=0):
         """Creates new instances of Rectangle.
