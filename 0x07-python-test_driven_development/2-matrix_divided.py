@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-Module Matrix_divided
-Divided matrix
+Module Matrix_divided Divided matrix
 """
 
 
