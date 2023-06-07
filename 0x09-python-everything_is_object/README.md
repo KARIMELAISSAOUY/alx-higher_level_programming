@@ -1,7 +1,8 @@
-# 0x09-python-everything_is_object
+# 0x09. Python - Everything is object
 ---
-## PYTHON 
+**ALX School**  project 
 ---
-*ALX PYTHON 
+## .txt Files
 ---
-# KARIM
+*PYTHON
+---
