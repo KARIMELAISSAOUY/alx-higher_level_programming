@@ -1,16 +1,16 @@
 #!/usr/bin/python3
 '''
-Module for pascal_triangle.
+Module For pascal_triangle..
 '''
 
 
 def pascal_triangle(n):
-    """ Pascal Triangle """
+    """Pascal Triangle.."""
 
     triangle = []
     if n <= 0:
-         return triangle
-    
+        return triangle
+
     triangle = [[1]]
     for i in range(n - 1):
         line = triangle[-1]
@@ -20,3 +20,5 @@ def pascal_triangle(n):
         aux.append(1)
         triangle.append(aux)
     return triangle
+
+
