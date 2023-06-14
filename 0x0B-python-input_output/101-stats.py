@@ -1,38 +1,30 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
+
 import sys
+from collections import defaultdict
 
+total_file_size = 0
+status_code_counts = defaultdict(int)
+line_count = 0
 
-def print_status():
-    '''
-        Printing The Status of the Request..
-    '''
-    counter = 0
-    size = 0
-    file_size = 0
-    status_codes = {"200": 0 , "301": 0, "400": 0, "401": 0,
-                    "403": 0 , "404": 0, "405": 0, "500": 0}
+try:
+    for line in sys.stdin:
+        line_count += 1
+        parts = line.strip().split(" ")
+        file_size = int(parts[-1])
 
-    for l in sys.stdin:
-        line = l.split()
-        try:
-            size += int(line[-1])
-            code = line[-2]
-            status_codes[code] += 1
-        except:
-            continue
-        if counter == 9:
-            print("File size: {}".format(size))
-            for key, val in sorted(status_codes.items()):
-                if (val != 0):
-                    print("{}: {}".format(key, val))
-            counter = 0
-        counter += 1
-    if counter < 9:
-        print("File size: {}".format(size))
-        for key, val in sorted(status_codes.items()):
-            if (val != 0):
-                print("{}: {}".format(key, val))
+        total_file_size += file_size
 
+        status_code = parts[-2]
+        status_code_counts[status_code] += 1
 
-if __name__ == "__main__":
-    print_status()
+        if line_count % 10 == 0:
+            print("Total file size:", total_file_size)
+            for code, count in sorted(status_code_counts.items()):
+                print(code + ":", count)
+
+except KeyboardInterrupt:
+    print("Total file size:", total_file_size)
+    for code, count in sorted(status_code_counts.items()):
+        print(code + ":", count)
+
