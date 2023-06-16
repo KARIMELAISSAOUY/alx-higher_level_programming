@@ -10,4 +10,3 @@ def read_file(filename=""):
         contents = open_file.read()
     print(contents, end="")
 
-
