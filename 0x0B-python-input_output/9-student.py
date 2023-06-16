@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-Module for class Student.
+Module for Class Student...
 '''
 
 
@@ -14,5 +14,7 @@ class Student:
         self.age = age
 
     def to_json(self):
-        ''' Return Dictionary To JSON '''
+        ''' Return Dictionary to JSON '''
         return self.__dict__
+
+
