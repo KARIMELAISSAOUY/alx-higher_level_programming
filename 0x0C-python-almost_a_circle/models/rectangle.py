@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This Module implements a Rectangle object
+This Module implements a Rectangle Object...
 """
 from models.base import Base
 
@@ -37,6 +37,7 @@ class Rectangle(Base):
         else:
             if value < 0:
                 raise ValueError("{} must be >= 0".format(name))
+
 
     @property
     def width(self) -> int:

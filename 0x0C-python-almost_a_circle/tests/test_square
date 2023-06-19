@@ -1,0 +1,49 @@
+import io
+import sys
+import unittest
+from models.square import Square
+
+class TestSquareInstantiation(unittest.TestCase):
+    """Test cases for instantiation of the Square class."""
+
+    def test_is_base_instance(self):
+        """Square should be an instance of Base."""
+        square = Square(10)
+        self.assertIsInstance(square, Base)
+
+    def test_is_square_instance(self):
+        """Square should be an instance of Square."""
+        square = Square(10)
+        self.assertIsInstance(square, Square)
+
+    def test_no_args_raises_error(self):
+        """Creating a Square without arguments should raise a TypeError."""
+        with self.assertRaises(TypeError):
+            Square()
+
+    # Add more test cases...
+
+class TestSquareSize(unittest.TestCase):
+    """Test cases for size initialization of the Square class."""
+
+    def test_invalid_size_types_raise_error(self):
+        """Invalid types for size should raise a TypeError."""
+        invalid_sizes = [None, "invalid", 5.5, complex(5), {"a": 1, "b": 2}, True, [1, 2, 3]]
+        for size in invalid_sizes:
+            with self.assertRaisesRegex(TypeError, "width must be an integer"):
+                Square(size)
+
+    def test_negative_or_zero_sizes_raise_error(self):
+        """Negative or zero sizes should raise a ValueError."""
+        sizes = [-1, 0]
+        for size in sizes:
+            with self.assertRaisesRegex(ValueError, "width must be > 0"):
+                Square(size)
+
+    # Add more test cases...
+
+# Add more test case classes for other aspects of the Square class...
+
+if __name__ == "__main__":
+    unittest.main()
+

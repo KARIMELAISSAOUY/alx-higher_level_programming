@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This Module implements a Square object
+This Module implements a Square object...
 """
 from models.rectangle import Rectangle
 

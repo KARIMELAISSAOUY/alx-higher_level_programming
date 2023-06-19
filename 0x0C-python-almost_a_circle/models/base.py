@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 """
-This Module implements `base` class of all other classes in this project.
-The goal of it is to manage id attribute in all your future classes
-and to avoid duplicating the same code (by extension, same bugs)
+This Module implements `base` class of all other classes in this project...
 """
+
 import json
 import turtle
 
@@ -109,7 +108,7 @@ class Base:
                 object_created.append(cls.create(**data))
 
         return object_created
-
+#base
     @classmethod
     def draw(cls, list_rectangles, list_squares):
         """draw the figure
